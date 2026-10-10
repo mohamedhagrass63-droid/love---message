@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10:10 | يوم مميز ❤️</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Tahoma, Arial, sans-serif;
+  background: linear-gradient(135deg, #1b0716, #551538, #26091e);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow-x: hidden;
+}
+
+.heart {
+  position: fixed;
+  bottom: -40px;
+  color: #ff8eb7;
+  opacity: 0.6;
+  animation: float 7s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.card {
+  width: 100%;
+  max-width: 520px;
+  text-align: center;
+  padding: 35px 24px;
+  border: 1px solid #ffffff35;
+  border-radius: 25px;
+  background: #ffffff0d;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 15px 50px #0005;
+  position: relative;
+  z-index: 1;
+}
+
+.date {
+  color: #ff9ec5;
+  letter-spacing: 4px;
+  font-size: 17px;
+}
+
+h1 {
+  font-size: clamp(32px, 8vw, 48px);
+  margin: 22px 0 12px;
+}
+
+p {
+  line-height: 2;
+}
+
+.intro {
+  color: #f8dce9;
+}
+
+button {
+  margin-top: 22px;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 30px;
+  background: #ff8db8;
+  color: #3c1027;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #ffc1d9;
+}
+
+#letter {
+  display: none;
+  text-align: right;
+  margin-top: 28px;
+  animation: appear 1s ease;
+}
+
+#letter h2 {
+  color: #ffabc9;
+  text-align: center;
+}
+
+.signature {
+  text-align: center;
+  color: #ffabc9;
+  margin-top: 25px;
+  font-size: 19px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="date">10 • 10 • 2026</div>
+
+  <h1>إنتِ حكاية حلوة ❤️</h1>
+
+  <p class="intro">
+    في أيام بتبقى مميزة بالتاريخ،<br>
+    وفي أيام بتبقى مميزة بالأشخاص...
+    <br>
+    والنهارده حبيت أعملك حاجة مخصوص.
+  </p>
+
+  <button id="openBtn" onclick="openLetter()">
+    افتحي رسالتك يا أجمل حاجة 💌
+  </button>
+
+  <div id="letter">
+    <h2>إلى أجمل بنت ❤️</h2>
+
+    <p>
+      النهارده 10/10، وكنت عايز أعمل حاجة مختلفة
+      عشان يوم زي ده يستاهل ذكرى حلوة بينا.
+    </p>
+
+    <p>
+      يمكن الكلام عمره ما يوصف كل اللي جوايا،
+      بس حبيت أقولك إن وجودك في حياتي فارق معايا،
+      وإن ضحكتك من الحاجات اللي بتقدر تغيّر يومي للأحسن.
+    </p>
+
+    <p>
+      مش لازم يكون فيه مناسبة عشان أقولك إنك غالية،
+      بس النهارده حبيت أفكرك إنك شخص مميز عندي،
+      وإن كل لحظة حلوة بينا ليها مكانة في قلبي.
+    </p>
+
+    <p>
+      أتمنى نفضل نعمل ذكريات حلوة سوا،
+      ونضحك على تفاصيل صغيرة نفتكرها بعدين ونبتسم.
+    </p>
+
+    <p>
+      ولو هختار حاجة واحدة أتمناها لليوم ده،
+      فهي إن الرسالة دي ترسم ابتسامة على وشك،
+      حتى لو لدقيقة واحدة. 🥹
+    </p>
+
+    <div class="signature">
+      كل 10/10 وإنتِ أجمل حاجة ❤️
+    </div>
+  </div>
+</div>
+
+<script>
+function openLetter() {
+  document.getElementById("letter").style.display = "block";
+  document.getElementById("openBtn").style.display = "none";
+}
+
+for (let i = 0; i < 18; i++) {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.textContent = "♥";
+  heart.style.left = Math.random() * 100 + "%";
+  heart.style.animationDelay = Math.random() * 7 + "s";
+  heart.style.animationDuration = (5 + Math.random() * 6) + "s";
+  heart.style.fontSize = (12 + Math.random() * 20) + "px";
+  document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
